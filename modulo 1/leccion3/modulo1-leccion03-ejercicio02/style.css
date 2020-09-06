@@ -1,0 +1,15 @@
+.block {
+  height: 100px;
+  width: 100px;
+  display: block;
+}
+.inline {
+  height: 100px;
+  width: 100px;
+  display: inline;
+}
+.inline-block {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
