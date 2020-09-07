@@ -1,0 +1,18 @@
+.container {
+  border: 2px solid black;
+}
+.item {
+  border: 2px solid blue;
+  box-sizing: border-box;
+}
+.container {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.item {
+}

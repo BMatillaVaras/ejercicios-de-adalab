@@ -1,0 +1,24 @@
+.container {
+  border: 2px solid black;
+}
+.item {
+  border: 2px solid blue;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+.container2 {
+  border: 2px solid black;
+}
+.item2 {
+  border: 2px solid blue;
+}
+.container2 {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
