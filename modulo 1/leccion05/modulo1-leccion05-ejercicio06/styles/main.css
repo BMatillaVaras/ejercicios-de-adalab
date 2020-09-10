@@ -1,0 +1,8 @@
+.cabecera {
+  background-color: purple;
+  position: fixed;
+}
+
+.principal {
+  position: absolute;
+}

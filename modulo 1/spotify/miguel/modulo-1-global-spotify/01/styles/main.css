@@ -1,0 +1,39 @@
+/* reset styles */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+/* header */
+
+.header {
+  padding: 0 20px 0 20px;
+  border: solid 2px red;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.link {
+  margin: 0 2px;
+  padding: 5px;
+}
+
+.link:hover {
+  background: yellow;
+}

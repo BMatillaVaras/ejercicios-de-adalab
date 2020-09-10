@@ -1,0 +1,12 @@
+body {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.item {
+  border: 2px solid blue;
+}
+.main {
+  min-height: 90vh;
+}
