@@ -1,0 +1,161 @@
+/* fuente Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+/* fuente OpenSans-semibold */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Rubik:wght@500&display=swap");
+
+/* fuente OpenSans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@500&display=swap");
+
+/* reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* variables */
+
+/* header */
+
+.dance {
+  background-color: #099d8d;
+  color: white;
+  padding: 15px 80px;
+  font-size: 16px;
+  font-family: "Rubik";
+}
+
+.list {
+  background: #14d9c4;
+}
+
+/* seccion 2 */
+
+.team-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team {
+  font-family: "Rubik";
+  font-size: 24px;
+  color: #14d9c4;
+  margin-top: 30px;
+}
+
+.description-team {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #54585a;
+  padding: 15px;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  transform: translate(0, 15px) rotate(45deg);
+  z-index: 10;
+}
+
+.features {
+  background-color: rgb(241, 241, 241);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.strength {
+  font-family: "Rubik";
+  font-size: 22px;
+  line-height: 45px;
+  text-align: center;
+  color: #099d8d;
+  z-index: 1;
+  padding-top: 30px;
+}
+
+.features-text {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #54585a;
+  text-align: center;
+  line-height: 24px;
+  padding: 0 15px 35px 15px;
+}
+
+.weaknesses {
+  font-family: "Rubik";
+  font-size: 22px;
+  line-height: 45px;
+  text-align: center;
+  color: #099d8d;
+  z-index: 1;
+}
+
+/* section3*/
+
+.about-us {
+  font-family: "Rubik";
+  font-size: 24px;
+  color: #099d8d;
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-photo {
+  width: 180px;
+  height: 180px;
+  box-sizing: content-box;
+  border: 5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-family: "Open Sans";
+  font-size: 20px;
+  color: black;
+  margin-top: 15px;
+  line-height: 45px;
+}
+
+.description {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #54585a;
+  padding: 0 18px 0 18px;
+  text-align: center;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fab {
+  color: #099d8d;
+  height: 30px;
+  width: 30px;
+}
+
+.fas {
+  color: #099d8d;
+  height: 30px;
+  width: 30px;
+}

@@ -1,0 +1,12 @@
+.section1 {
+  height: 50vh;
+  &__paragraph {
+    text-align: center;
+  }
+}
+
+.button {
+  color: red;
+  height: 45px;
+  border-radius: 5px;
+}

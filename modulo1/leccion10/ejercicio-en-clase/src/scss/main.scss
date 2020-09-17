@@ -1,0 +1,13 @@
+@import "./core/variables";
+
+.uno {
+  color: $mainColor;
+
+  &.dos {
+    color: blue;
+
+    .tres {
+      color: yellow;
+    }
+  }
+}
