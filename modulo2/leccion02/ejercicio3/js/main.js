@@ -1,0 +1,18 @@
+const fruit1 = "kiwis";
+const fruit2 = "Peras conferencia";
+const fruit3 = "uvas";
+const price1 = 5;
+const price2 = 2;
+const price3 = 4;
+const shipping1 = 2;
+const shipping2 = 2;
+const shipping3 = 0.5;
+const totalKiwi = price1 * shipping1;
+console.log(fruit1 + totalKiwi);
+const totalPeras = price2 * shipping2;
+console.log(fruit2 + totalPeras);
+const totalGrape = price3 * shipping3;
+console.log(fruit3 + totalGrape);
+console.log(totalKiwi + totalPeras + totalGrape);
+const total = totalKiwi + totalPeras + totalGrape;
+console.log(`Total ` + total);

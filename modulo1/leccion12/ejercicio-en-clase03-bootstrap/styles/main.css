@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+
+.header {
+  background-color: pink;
+  height: 20vh;
+}
+
+.menu {
+  background-color: purple;
+  height: 60vh;
+}
+
+.content {
+  background-color: red;
+}
+
+.footer {
+  background-color: blue;
+  height: 20vh;
+}
