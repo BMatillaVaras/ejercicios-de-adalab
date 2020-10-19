@@ -1,0 +1,9 @@
+1.- https://swapi.dev/api/
+2.- No necesita autenticación
+3.- GET 
+4.- https://swapi.dev/api/people/1/
+5.- https://swapi.dev/api/fimls/1/
+6.- Podemo acceder a personajes, planetas, películas, especies, vechículos, y naves espaciales
+7.- https://swapi.dev/api/people/   Sí está paginada
+8.- Para buscar personajes añadimos /{número del personaje}/
+9.- https://swapi.dev/api/people/1/?format=wookiee
