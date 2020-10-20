@@ -21,9 +21,12 @@ form.addEventListener("keyup", paint);
 
 function uploadName() {
   const savedUser = JSON.parse(localStorage.getItem("user"));
-  inputName.value = savedUser.name;
-  inputLastName.value = savedUser.lastName;
-  name.innerHTML = savedUser.name;
-  lastName.innerHTML = savedUser.lastName;
+  if (savedUser !== null) {
+    //tenemos que hacer esta validación de si savedUser es distinto de null para que lo pinte, porque si no la primera vez que cargamos la página como no hay nada guardado en localStorage la consola nos va a dar un error, aunque el usuario no lo vez y funcionar funciona.
+    inputName.value = savedUser.name;
+    inputLastName.value = savedUser.lastName;
+    name.innerHTML = savedUser.name;
+    lastName.innerHTML = savedUser.lastName;
+  }
 }
 uploadName();

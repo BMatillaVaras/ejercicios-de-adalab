@@ -9,6 +9,7 @@ function paint() {
   localStorage.setItem("name", inputValue);
 }
 input.addEventListener("keyup", paint);
+
 localStorage.getItem("name");
 input.value = localStorage.getItem("name");
 name.innerHTML = localStorage.getItem("name");

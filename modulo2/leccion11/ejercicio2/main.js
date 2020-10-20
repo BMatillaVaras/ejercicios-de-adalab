@@ -6,7 +6,7 @@ const list = document.querySelector(".js-list");
 
 function paint() {
   const paintInput = input.value;
-  let listContent = ""; //hemos creado esta variable para meter aquí el <li> y después esto añadirlo al innerHTML de la lista, porque así cada vez que se ejecuta la búsqueda de personajes se borra lo anterior y se crea una lsita nueva, sin añadirse a lo ya existente
+  let listContent = ""; //hemos creado esta variable para meter aquí el <li> y después esto añadirlo al innerHTML de la lista, porque así cada vez que se ejecuta la búsqueda de personajes se borra lo anterior y se crea una lista nueva, sin añadirse a lo ya existente
   fetch(`https://swapi.dev/api/people/?search=${paintInput}`)
     .then((response) => response.json())
     .then((data) => {
