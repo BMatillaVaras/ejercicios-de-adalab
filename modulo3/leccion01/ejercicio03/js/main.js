@@ -18,7 +18,6 @@ class Square extends Polygon {
   constructor(base) {
     //Hacemos referencia a los atributos del padre(polygon)
     super(4, base, base);
-    this.side = base;
   }
 }
 
@@ -28,15 +27,16 @@ class Triangle extends Polygon {
   }
   area() {
     return super.area() / 2;
+    // returnt (this.base*this.height)/2;
   }
 }
 
-const mySquare = new Square(4);
+const mySquare = new Square(5);
 const myTriangle = new Triangle(4, 3);
 
 console.log(
   `El cuadrado que tiene ${
-    mySquare.side
+    mySquare.base
   } metros de lado tiene ${mySquare.perimeter()} metros de perímetro y su área es de ${mySquare.area()} metros cuadrados.`
 );
 
