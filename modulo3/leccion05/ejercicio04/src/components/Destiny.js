@@ -11,8 +11,6 @@ class Destiny extends React.Component {
 
   handleListener(ev) {
     this.city = ev.target.value;
-    const text = `Tu destino es viajar a ${this.city}`;
-    //return <p>`Tu destino es viajar a `</p>;
     this.forceUpdate();
   }
   render() {
@@ -26,7 +24,9 @@ class Destiny extends React.Component {
           <option value="Tokio">Tokio</option>
         </select>
         <p>Tu destino es viajar a {this.city}</p>
-        <CityImage />
+        <div>
+          <CityImage city={this.city} />
+        </div>
       </>
     );
   }

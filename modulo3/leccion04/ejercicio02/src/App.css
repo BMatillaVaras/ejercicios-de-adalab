@@ -1,0 +1,10 @@
+.halfpage1 {
+  height: 100vh;
+  width: 50vw;
+}
+
+.halfpage2 {
+  height: 100vh;
+  width: 50vw;
+  transform: translate(50vw, -100vh);
+}
