@@ -1,0 +1,22 @@
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    margin: 10px;
+  }
+  &__input {
+    margin: 10px;
+  }
+  &__textarea {
+    margin: 10px;
+  }
+  &__select {
+    margin: 10px;
+  }
+}
