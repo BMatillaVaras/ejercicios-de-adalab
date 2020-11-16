@@ -1,9 +1,9 @@
 import React from "react";
 
-class HalfPage extends React.Component {
+class HalfPage2 extends React.Component {
   render() {
-    return <div className="halfpage1">{this.props.children}</div>;
+    return <div className={this.props.class}>{this.props.children}</div>;
   }
 }
 
-export default HalfPage;
+export default HalfPage2;

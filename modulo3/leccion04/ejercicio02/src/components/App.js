@@ -1,13 +1,12 @@
 import React from "react";
 import HalfPage from "./HalfPage";
-import HalfPage2 from "./HalfPage2";
 import "../App.css";
 
 class Item extends React.Component {
   render() {
     return (
       <>
-        <HalfPage>
+        <HalfPage class="halfpage1">
           <h1>Podremos colocar esto en el lado izquierdo?</h1>
           <h3>Vamos a probar</h3>
           <p>
@@ -21,7 +20,7 @@ class Item extends React.Component {
             muelas.
           </p>
         </HalfPage>
-        <HalfPage2>
+        <HalfPage class="halfpage2">
           <h1>Podremos colocar esto en el lado derecho?</h1>
           <h3>Vamos a probar</h3>
           <p>
@@ -34,7 +33,7 @@ class Item extends React.Component {
             caidita jarl la caidita por la gloria de mi madre me cago en tus
             muelas.
           </p>
-        </HalfPage2>
+        </HalfPage>
       </>
     );
   }

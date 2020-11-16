@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./App.css";
 
 const arrayOfItems = [
@@ -88,4 +89,9 @@ export default ItemList;
 //Como en ItemList metemos el componente Item, pero no le pasamos la prop description, coge la dafulProp que indicamos aquí.
 Item.defaultProps = {
   description: "No hay descripción",
+};
+
+Item.propTypes = {
+  name: PropTypes.element.isRequired,
+  price: PropTypes.number.isRequired,
 };

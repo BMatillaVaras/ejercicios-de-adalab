@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   handleChange(ev) {
-    const name = ev.target.name;
+    const name = ev.target.id;
     this.setState({
       [name]: ev.target.value,
     });

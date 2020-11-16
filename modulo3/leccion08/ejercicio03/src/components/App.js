@@ -8,10 +8,11 @@ class App extends React.Component {
       title: "",
       description: "",
       select: "",
-      age: "",
-      gender: "",
+      age: "A:todos los públicos",
+      gender: [],
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleChangeCheckbox = this.handleChangeCheckbox.bind(this);
   }
 
   handleChange(ev) {
@@ -20,6 +21,29 @@ class App extends React.Component {
       [name]: ev.target.value,
     });
   }
+
+  handleChangeCheckbox(ev) {
+    const name = ev.target.name;
+    if (this.state.gender.includes(ev.target.value)) {
+      const newGender = this.state.gender.filter(
+        (gender) => gender !== ev.target.value
+      );
+      this.setState({
+        gender: newGender,
+      });
+    } else if (
+      !this.state.gender.includes(ev.target.value) &&
+      this.state.gender.length < 3
+    ) {
+      this.setState({
+        [name]: [...this.state.gender, ev.target.value],
+      });
+    } else {
+      ev.preventDefault();
+      alert("Solo puedes elegir 3 géneros");
+    }
+  }
+
   render() {
     return (
       <div className="app">
@@ -64,6 +88,9 @@ class App extends React.Component {
                 id="A"
                 name="age"
                 value="A:todos los públicos"
+                checked={
+                  this.state.age === "A:todos los públicos" ? true : false
+                }
                 onChange={this.handleChange}
               />
               A:todos los públicos
@@ -74,6 +101,7 @@ class App extends React.Component {
                 id="7"
                 name="age"
                 value="7"
+                checked={this.state.age === "7" ? true : false}
                 onChange={this.handleChange}
               />
               7
@@ -84,6 +112,7 @@ class App extends React.Component {
                 id="7"
                 name="age"
                 value="12"
+                checked={this.state.age === "12" ? true : false}
                 onChange={this.handleChange}
               />
               12
@@ -94,6 +123,7 @@ class App extends React.Component {
                 id="7"
                 name="age"
                 value="16"
+                checked={this.state.age === "16" ? true : false}
                 onChange={this.handleChange}
               />
               16
@@ -104,6 +134,7 @@ class App extends React.Component {
                 id="7"
                 name="age"
                 value="18"
+                checked={this.state.age === "18" ? true : false}
                 onChange={this.handleChange}
               />
               18
@@ -117,7 +148,7 @@ class App extends React.Component {
                 type="checkbox"
                 value="Comedia"
                 name="gender"
-                onChange={this.handleChange}
+                onChange={this.handleChangeCheckbox}
               />
               Comedia
             </label>
@@ -127,7 +158,7 @@ class App extends React.Component {
                 type="checkbox"
                 value="Drama"
                 name="gender"
-                onChange={this.handleChange}
+                onChange={this.handleChangeCheckbox}
               />
               Drama
             </label>
@@ -137,7 +168,7 @@ class App extends React.Component {
                 type="checkbox"
                 value="Fantasía"
                 name="gender"
-                onChange={this.handleChange}
+                onChange={this.handleChangeCheckbox}
               />
               Fantasía
             </label>
@@ -147,7 +178,7 @@ class App extends React.Component {
                 type="checkbox"
                 value="Acción"
                 name="gender"
-                onChange={this.handleChange}
+                onChange={this.handleChangeCheckbox}
               />
               Acción
             </label>
@@ -157,7 +188,7 @@ class App extends React.Component {
                 type="checkbox"
                 value="Familia"
                 name="gender"
-                onChange={this.handleChange}
+                onChange={this.handleChangeCheckbox}
               />
               Familia
             </label>
@@ -167,7 +198,7 @@ class App extends React.Component {
                 type="checkbox"
                 value="Terror"
                 name="gender"
-                onChange={this.handleChange}
+                onChange={this.handleChangeCheckbox}
               />
               Terror
             </label>
@@ -178,6 +209,7 @@ class App extends React.Component {
           <p>{this.state.description}</p>
           <p>{this.state.select}</p>
           <p>Edad mínima permitida para la película: {this.state.age}</p>
+          <p>Género de la película: {this.state.gender}</p>
         </article>
       </div>
     );

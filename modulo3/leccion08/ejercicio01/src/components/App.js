@@ -9,32 +9,26 @@ class App extends React.Component {
       description: "",
       select: "",
     };
-    this.handleChange = this.handleChange.bind(this);
-    // this.handleChangeText = this.handleChangeText.bind(this);
-    // this.handleChangeSelect = this.handleChangeSelect.bind(this);
+    this.handleChangeInput = this.handleChangeInput.bind(this);
+    this.handleChangeText = this.handleChangeText.bind(this);
+    this.handleChangeSelect = this.handleChangeSelect.bind(this);
   }
 
-  handleChange(ev) {
-    const name = ev.target.name;
+  handleChangeInput(ev) {
     this.setState({
-      [name]: ev.target.value,
+      title: ev.target.value,
     });
   }
-  // handleChangeInput(ev) {
-  //   this.setState({
-  //     title: ev.target.value,
-  //   });
-  // }
-  // handleChangeText(ev) {
-  //   this.setState({
-  //     description: ev.target.value,
-  //   });
-  // }
-  // handleChangeSelect(ev) {
-  //   this.setState({
-  //     select: ev.target.value,
-  //   });
-  // }
+  handleChangeText(ev) {
+    this.setState({
+      description: ev.target.value,
+    });
+  }
+  handleChangeSelect(ev) {
+    this.setState({
+      select: ev.target.value,
+    });
+  }
   render() {
     return (
       <div className="app">
@@ -49,9 +43,11 @@ class App extends React.Component {
             type="text"
             name="title"
             value={this.state.title}
-            onChange={this.handleChange}
+            onChange={this.handleChangeInput}
           />
-          <label htmlFor="description">Resumen de la película</label>
+          <label className="form__label" htmlFor="description">
+            Resumen de la película
+          </label>
           <textarea
             className="form__textarea"
             name="description"
@@ -59,14 +55,14 @@ class App extends React.Component {
             cols="30"
             rows="10"
             value={this.state.description}
-            onChange={this.handleChange}
+            onChange={this.handleChangeText}
           ></textarea>
           <select
             className="form__select"
             name="select"
             id="select"
             value={this.state.select}
-            onChange={this.handleChange}
+            onChange={this.handleChangeSelect}
           >
             <option value="Español">Español</option>
             <option value="Inglés">Inglés</option>
