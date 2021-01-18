@@ -17,7 +17,9 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeCheckbox = this.handleChangeCheckbox.bind(this);
     this.handleFileChange = this.handleFileChange.bind(this);
+    this.writeImage = this.writeImage.bind(this);
     this.fileInput = React.createRef();
+    this.fr = new FileReader();
   }
 
   handleChange(ev) {
@@ -57,13 +59,12 @@ class App extends React.Component {
   }
 
   handleFileChange(ev) {
-    const myPic = ev.target.files[0];
-    const picName = myPic.name;
+    const file = this.fileInput.current.files[0];
     this.fr.onload = this.writeImage;
-    this.fr.readAsDataURL(myPic);
-    this.setState({
-      file: picName,
-    });
+    this.fr.readAsDataURL(file);
+  }
+  fakeClick() {
+    this.fileInput.current.click();
   }
 
   render() {
@@ -241,7 +242,7 @@ class App extends React.Component {
           <p>Edad mínima permitida para la película: {this.state.age}</p>
           <p>Género de la película: {this.state.gender}</p>
           <div>
-            <img src="" alt="Poster de la película" />
+            <img src={this.state.fileUrl} alt="Poster de la película" />
           </div>
         </article>
       </div>
