@@ -4,9 +4,9 @@ const fs = require("fs");
 const text = "Lorem ipsum";
 
 const object = {
-  originalContent: "Lorem ipsum",
-  changedContent: "LOREM IPSUM",
-  textLenght: 11,
+  originalContent: text,
+  changedContent: text.toUpperCase(),
+  textLenght: text.length,
 };
 
 // console.log(object);
