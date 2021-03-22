@@ -55,7 +55,7 @@ readFile("./input-file.txt", (fileContent) => {
     textLength: fileContent.length,
   };
   const textString = JSON.stringify(objectText);
-  writeFile("./output-file.txt", textString, () => {
+  writeFile("./output-file.json", textString, () => {
     console.log("The file has been copied");
   });
 });
