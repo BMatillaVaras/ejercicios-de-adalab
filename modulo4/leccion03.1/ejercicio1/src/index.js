@@ -46,5 +46,11 @@ app.get("/response-c", (req, res) => {
 });
 
 app.get("/response-d", (req, res) => {
-  res.json({ result: "ok" });
+  const user = parseInt(req.query.user);
+  if(user === 1 || user == 2) {
+    res.json({ result: "ok" });
+  } else {
+    res.status(404).json({ result: 'error: invalid query param' });
+  }
+
 });
