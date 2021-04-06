@@ -29,7 +29,7 @@ app.get("/response-b", (req, res) => {
         <title>Document</title>
       </head>
       <body>
-        <h1>Esta es una página de prueba, quiero ver si Git funciona</h1>
+        <h1>Esta es una página de prueba</h1>
       </body>
     </html>
 `;
